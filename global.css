@@ -35,10 +35,10 @@ header h1 {
   color: white;
   font-size: 72px;
   font-weight: 700;
-  animation: text-shadow 1.5s ease-in-out infinite;
-  animation-play-state: paused;
 }
 header h1.over {
+  animation: text-shadow 1.5s ease-in-out infinite;
+  animation-play-state: paused;
   animation-play-state: running;
 }
 
@@ -54,7 +54,7 @@ section.intro p {
 section.portifolio {
   display: grid;
   justify-content: center;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-template-rows: auto;
   column-gap: 16px;
   row-gap: 16px;
@@ -67,7 +67,8 @@ section.portifolio {
   border-radius: 30px;
   box-shadow: 0px 0px 20px rgb(0 0 0 / 40%);
 }
-.card:hover .overlay {
+.card:hover .overlay,
+.card:in-viewport .overlay {
   opacity: 0.15;
 }
 .overlay {
@@ -106,7 +107,7 @@ footer .social {
   width: 30px;
   height: 30px;
 }
-@media (min-width: 768px) {
+@media (min-width: 640px) {
   section.container {
     width: 750px;
   }
@@ -114,7 +115,7 @@ footer .social {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   section.container {
     width: 970px;
   }
